@@ -7,11 +7,11 @@ def buscar_contatos():
     supabase_key = os.getenv("SUPABASE_KEY")
 
     if not supabase_url and not supabase_key:
-        raise ValueError(">>>error: SUPABASE_URL e SUPABASE_KEY não encontradas")
+        raise ValueError("SUPABASE_URL e SUPABASE_KEY não encontradas")
     elif not supabase_url:
-        raise ValueError(">>>error: SUPABASE_URL não encontrada")
+        raise ValueError("SUPABASE_URL não encontrada")
     elif not supabase_key:
-        raise ValueError(">>>error: SUPABASE_KEY não encontrada")
+        raise ValueError("SUPABASE_KEY não encontrada")
 
     supabase = create_client(supabase_url, supabase_key)
 
